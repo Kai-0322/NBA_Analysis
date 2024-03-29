@@ -9,3 +9,4 @@ lj_nba_df = nba_df.loc[nba_df["Player"] == "LeBron James"]
 specific_player_df = nba_df.loc[(nba_df["Player"] == "LeBron James") | (nba_df["Player"] == "Michael Jordan")]
 avg_games_df = specific_player_df.groupby("Player")["G"].mean()
 specific_player_df.count()
+#test
