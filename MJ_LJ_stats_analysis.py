@@ -42,33 +42,36 @@ mean_summary_df = pd.DataFrame({"Avg. Games Played": mean_games, "Avg. Mins Play
 mean_summary_df
 #cell 6
 each_game_stats = pd.read_csv("NBA_Data/MJ_LJ_Games.csv")
-each_game_stats.head()  
-#cell 7
+each_game_stats.head()
+#cell 7  
+each_game_stats.rename(columns={"PLAYER_NAME": "Player", "FG_PCT": "FG%", "FG3_PCT": "3P%"}, inplace=True)
+each_game_stats
+#cell 8
 each_game_stats = each_game_stats[["Season", "Player", "MATCHUP", "WL", "PTS", "FG%", "OREB", "DREB", "AST", "STL", "BLK", "TOV"]]
 each_game_stats.head()
-#cell 8
+#cell 9
 #Check for na values
 each_game_stats.count()
-#cell 9 
+#cell 10 
 each_game_stats.dropna(inplace=True)
-#cell 10
+#cell 11
 each_game_stats.count()
-#cell 11 
+#cell 12 
 mj_each_game = each_game_stats.loc[each_game_stats["Player"] == "Michael Jordan"]
 mj_each_game
-#cell 12
+#cell 13
 champ_mj_avg = mj_each_game[(mj_each_game["Season"] == 1991)]["PTS"].mean()
 champ_mj_avg
-#cell 13
+#cell 14
 lj_each_game = each_game_stats.loc[each_game_stats["Player"] == "LeBron James"]
 lj_each_game
-#cell 14
+#cell 15
 champ_lj_avg = lj_each_game[(lj_each_game["Season"] == 2012)]["PTS"].mean()
 champ_lj_avg
-#cell 15
+#cell 16
 #Average Points each player scored when they won championship (around the same age)
 champ_avg = pd.DataFrame({"Avg. Points MJ Scored": champ_mj_avg, "Avg. Points LJ Scored": champ_lj_avg}, index = [0])
 champ_avg
-#cell 16
+#cell 17
 mj_pts = mj_each_game.loc[mj_each_game["Season"] == 1991]
 mj_pts
