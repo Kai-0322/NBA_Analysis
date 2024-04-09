@@ -1,14 +1,20 @@
 # Project-1
-# Who is the greatest scorer of all time
+# Hypothesis: By establishing who’s skill set has the highest correlation with wins in the NBA since it’s start in 1950, we can factually settle who is the greatest basketball player of all time.
 
 # Which variable is better correlated with wins?
 - Run a Pearson Correlation test on all variables to determine which one is most likely to predict a win.
-- Filter the data by games that were "won" and then run the corr() function
+- Filter the data by games that were "won" 
 - The conclusion was points!
 
-# Our definition of best will be based on points because of its high correlation with winning.
+# Our definition of best will be based on points initially because of its high correlation with winning.
 - We isolate the top five scorers/season and compare to the league average points/player/season
 - Calculate how many standard deviations are they away from the average
+
+# We then created weighted metrics so we could get a more inclusive view of the greatest player.
+-We sorted the data based on games won and lost.
+- Using the Pearson Coefficient and the standard deviation for each season we were able to calculate the overall effectiveness of a players skills in creating the wins.
+-We then created an ascending list of the top player based on their impact score for every season.
+
 
 # What did we learn
 - Initially we wanted to directly compare two athletes we felt were considered to the the best basketball players of all time
@@ -20,4 +26,4 @@
 
 # Resources
 - Our Dataset used for pulling all of our information to make this project possible was from basketball-reference.com
-- Utilized AI to help with our more complex visualizations. 
+- Utilized AI to add visual interest to graphs and correct syntax on more complex loops.
