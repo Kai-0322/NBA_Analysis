@@ -25,5 +25,5 @@
 - and narrow in a sense of making sure that we were soley focused on the stats that win games.
 
 # Resources
-- Our Dataset used for pulling all of our information to make this project possible was from basketball-reference.com
+- Our Dataset used for pulling all of our information to make this project possible was from https://www.kaggle.com/datasets/loganlauton/nba-players-and-team-data?resource=download
 - Utilized AI to add visual interest to graphs and correct syntax on more complex loops.
